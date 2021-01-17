@@ -27,10 +27,19 @@ namespace ClassMethodDemo
             customer3.Surname = "Kaleci";
             customer3.AllAssets = 212002.345;
 
+            Customer customer4 = new Customer();
+            customer4.Id = 4;
+            customer4.Tc = "1257687324";
+            customer4.Name = "Dilara";
+            customer4.Surname = "Assoy";
+            customer4.AllAssets = 532232.345;
+
             Customer[] allCustomers = new Customer[] { customer1, customer2, customer3 };
 
             CustomerManager customerManager = new CustomerManager();
             customerManager.Get_All_Customer(allCustomers);
+            customerManager.Add_Customer(customer4);
+            customerManager.Delete_Customer(customer2);
 
 
         }
